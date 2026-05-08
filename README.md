@@ -127,33 +127,6 @@ Open the local URL shown in terminal (usually `http://localhost:8501`).
 - Image generation depends on API quota/safety responses
 - No lockfile is included yet (dependency versions are floating)
 
-## ChatGPT Context Block (Paste-Friendly)
-Use this block when asking ChatGPT for help on this project:
 
-```text
-Project: Blog Writing Agent (Python, LangGraph, Streamlit)
-
-Core files:
-- bwa_backend.py: LangGraph app with router -> optional research -> orchestrator -> worker fanout -> reducer subgraph (merge + image planning + image generation)
-- bwa_frontend.py: Streamlit UI to run graph, stream progress, preview markdown/images, and download outputs
-- requirements.txt: runtime dependencies
-
-Behavior:
-- Generates technical blogs from a topic.
-- Routing modes:
-  - closed_book (no research)
-  - hybrid (partial research/citations)
-  - open_book (news/recency-driven)
-- Research uses Tavily search.
-- Section writing is task-based and merged into final markdown.
-- Image planning inserts placeholders; image generation writes files under images/<blog_slug>/ and replaces placeholders.
-
-Runtime:
-- Needs OPENAI_API_KEY
-- Optional: TAVILY_API_KEY for research
-- Optional: GOOGLE_API_KEY for image generation
-
-Run command:
-- streamlit run bwa_frontend.py
 ```
 
